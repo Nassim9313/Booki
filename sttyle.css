@@ -5,6 +5,18 @@
   font-family: 'Raleway', 'sans-serif;';
 }
 
+body
+{
+	margin: 0;
+}
+
+main
+{
+ margin: 0 auto;
+ max-width: 1400px;
+}
+
+
 nav
 {
 	display: flex;
@@ -191,7 +203,6 @@ a
 {
 	display: flex;
 	gap: 2rem;
-	align-items: center;
 }
 
 .list_appart > div
@@ -200,6 +211,7 @@ a
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-inline: -1rem;
+	align-items: center;
 }
 
 .list_appart > aside
@@ -229,6 +241,7 @@ a
 	.list_appart
 	{
 		flex-direction: column-reverse;
+		align-items: center;
 	}
 }
 
@@ -239,6 +252,7 @@ a
 	gap: 1rem;
 	justify-content: space-around;
 	margin-bottom: 1rem;
+	
 }
 
 
@@ -246,9 +260,10 @@ a
 {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 2rem;
 	width: 100%;
 }
+
 
 
 .appart_card
@@ -343,4 +358,113 @@ width: 35%;
 .popular .stars
 {
 	    margin-top: 0rem;
+}
+
+/* Activites */
+.activity_list
+{
+ 
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem)) ;
+ grid-template-rows: repeat(5, 1fr);
+ gap: 2rem;
+ margin-bottom: 20vh;
+ justify-content: center;
+ margin-bottom: 4rem;
+}
+
+.activity_list > *
+{
+	background-size: cover;
+  display: flex;
+  background-position: center;
+  border-radius: 1rem ;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+  transition: all  200ms;
+}
+
+.activity_list > div:hover
+{
+	transform: scale(1.2);
+}
+
+.big1
+{
+	grid-row: 1 / -1;
+  background-image: url(https://booki.mathisbarre.com/img/activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+}
+
+.big2
+{
+	grid-column: 3 /4;
+	grid-row: 1/ -1;
+	background-image: url(https://d33wubrfki0l68.cloudfront.net/ead389ebcd18bc2ca50ceccc88722649f4290abc/4b4d3/assets/img/activity/kilyan-sockalingum-nr8-cbcn3ai-unsplash.jpg);
+	height: 30rem;
+}
+
+.medium1
+{
+	grid-row: span 3;
+	background-image: url(	https://booki.mathisbarre.com/img/activity/small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+  
+}
+
+.medium2
+{
+ grid-column: 4/-1;
+ grid-row: 3/-1;
+ background-image: url(	https://booki.mathisbarre.com/img/activity/small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+
+}
+
+.small1
+{
+	grid-column: 2 / 3;
+	grid-row: 4/ -1;
+	background-image: url(	https://booki.mathisbarre.com/img/activity/small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+}
+
+.small2
+{
+	grid-column: 4/-1;
+	grid-row: 1 / 3;
+	background-image: url(https://booki.mathisbarre.com/img/activity/small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+}
+
+.activity_list h3
+{
+	background-color: white;
+	margin-top: auto;
+	margin-bottom: 0;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0 0 1rem 1rem;
+}
+
+
+@media (max-width: 1500px)
+{
+	.activity_list
+	{
+		grid-template-rows: repeat(auto-fit, 15rem);
+	}
+	.activity_list > *
+	{
+		grid-column: span 1;
+		grid-row: span 1;
+		height: 15rem;
+	}
+}
+
+
+/* Footer */
+
+footer
+{
+	background-color: lightgrey;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	font-size: smaller;
+	padding: 1rem;
 }

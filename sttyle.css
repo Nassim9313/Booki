@@ -2,6 +2,7 @@
 
 *
 {
+
   font-family: 'Raleway', 'sans-serif;';
 }
 
@@ -131,7 +132,7 @@ a
 		display: none;
 	}
 
-	#loupe
+ #loupe
  {
  	  color: white;
  	  background-color: #0065FC ;
@@ -169,13 +170,14 @@ a
 .filter_list span
 {
  font-weight: bold;	
- padding: 2rem;
+ padding: 1rem;
 }
 
 .filter:hover
 {
 	background-color:lightblue;
 	transform: scale(1.01);
+	cursor: pointer;
 }
 
 .info
@@ -203,11 +205,12 @@ a
 {
 	display: flex;
 	gap: 2rem;
+	margin: 1rem;
 }
 
 .list_appart > div
 {
-	background-color: lightgrey;
+	background-color: #F2F2F2;
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-inline: -1rem;
@@ -216,7 +219,7 @@ a
 
 .list_appart > aside
 {
-	background-color: lightgrey;
+	background-color: #F2F2F2;
 	padding: 1rem;
 	border-radius: 1rem;
 }
@@ -269,6 +272,9 @@ a
 .appart_card
 {
 	background-color: white;
+	height: 225px;
+  width: 235px;
+  overflow: hidden;
 	border-radius: 1rem;
 	margin: 0;
 	padding: 0.5rem;
@@ -277,20 +283,18 @@ a
 }
 .appart_card img
 {
- border-radius: 1rem 1rem 0 0;
  height: 7rem;
  width: 100%;
- object-fit: cover;
  object-position: top;
+ border-radius: 1rem 1rem 0 0;
 }
 
 .appart_card p
 .appart_card h3
-.popular_description p 
-.popular_description h3
 {
- margin: 0.2rem;
+	 font-size:xx-small;
 }
+
 
 .blue
 {
@@ -300,6 +304,13 @@ a
 .grey
 {
 	color: darkgrey;
+}
+
+.showmore{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 5%;
+    padding-bottom: 2.5%;
 }
 
 .popular
@@ -361,99 +372,90 @@ width: 35%;
 }
 
 /* Activites */
-.activity_list
-{
- 
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem)) ;
- grid-template-rows: repeat(5, 1fr);
- gap: 2rem;
- margin-bottom: 20vh;
- justify-content: center;
- margin-bottom: 4rem;
-}
 
-.activity_list > *
-{
-	background-size: cover;
+.activity {
+  display: grid;
+  column-gap: 2rem;
+  margin: 4rem 0;
+}
+.activityTitle {
+  grid-column: 1/-1;
+}
+.activityCard {
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 1rem;
+  overflow: hidden;
   display: flex;
-  background-position: center;
-  border-radius: 1rem ;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
-  transition: all  200ms;
+  flex-direction: column;
+  transition-duration: 0.1s;
+}
+.activityCard:hover {
+  transform: scale(1.01);
+}
+.activityCardWrapimg {
+  position: relative;
+  flex: 1;
+}
+.activityCardWrapimgImg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.activityCardTitle {
+  margin: 1.2rem 1.5rem;
 }
 
-.activity_list > div:hover
-{
-	transform: scale(1.2);
+@media (min-width: 1100px) {
+  .activity {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+  }
+  .activityCard1 {
+    grid-row: 2/7;
+    grid-column: 1/2;
+  }
+  .activityCard2 {
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
+  .activityCard3 {
+    grid-column: 3/4;
+    grid-row: 2/7;
+  }
+  .activityCard4 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .activityCard5 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+  .activityCard6 {
+    grid-column: 4/5;
+    grid-row: 4/7;
+  }
 }
-
-.big1
-{
-	grid-row: 1 / -1;
-  background-image: url(https://booki.mathisbarre.com/img/activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+@media (max-width: 1100px) {
+  .activity {
+    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 12rem 12rem;
+  }
 }
-
-.big2
-{
-	grid-column: 3 /4;
-	grid-row: 1/ -1;
-	background-image: url(https://d33wubrfki0l68.cloudfront.net/ead389ebcd18bc2ca50ceccc88722649f4290abc/4b4d3/assets/img/activity/kilyan-sockalingum-nr8-cbcn3ai-unsplash.jpg);
-	height: 30rem;
+@media (max-width: 925px) {
+  .activity {
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 12rem 12rem 12rem;
+  }
 }
-
-.medium1
-{
-	grid-row: span 3;
-	background-image: url(	https://booki.mathisbarre.com/img/activity/small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
-  
-}
-
-.medium2
-{
- grid-column: 4/-1;
- grid-row: 3/-1;
- background-image: url(	https://booki.mathisbarre.com/img/activity/small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
-
-}
-
-.small1
-{
-	grid-column: 2 / 3;
-	grid-row: 4/ -1;
-	background-image: url(	https://booki.mathisbarre.com/img/activity/small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
-}
-
-.small2
-{
-	grid-column: 4/-1;
-	grid-row: 1 / 3;
-	background-image: url(https://booki.mathisbarre.com/img/activity/small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
-}
-
-.activity_list h3
-{
-	background-color: white;
-	margin-top: auto;
-	margin-bottom: 0;
-	width: 100%;
-	padding: 1rem;
-	border-radius: 0 0 1rem 1rem;
-}
-
-
-@media (max-width: 1500px)
-{
-	.activity_list
-	{
-		grid-template-rows: repeat(auto-fit, 15rem);
-	}
-	.activity_list > *
-	{
-		grid-column: span 1;
-		grid-row: span 1;
-		height: 15rem;
-	}
+@media (max-width: 650px) {
+  .activity {
+    row-gap: 2rem;
+  grid-template-columns: 1fr;
+    grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+  }
 }
 
 
@@ -467,4 +469,15 @@ footer
 	justify-content: space-evenly;
 	font-size: smaller;
 	padding: 1rem;
+}
+
+@media (max-width: 650px) {
+  footer {
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #F2F2F2;
+    font-size: 15px;
+  }
 }
